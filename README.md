@@ -2,6 +2,8 @@
 
 ## Project 3 - AI-201 - Apoorv Thite
 
+## Video demo at : https://www.loom.com/share/2d7357cd560e4739aa2889139b7a752f
+
 A fine-tuned text classifier that evaluates discourse quality in r/nba. Given a post or comment from the NBA subreddit, TakeMeter assigns one of four labels: `analysis`, `hot_take`, `discussion`, or `reaction`. The goal is to distinguish between different modes of engagement in sports discourse, from structured statistical arguments to pure emotional reactions.
 
 ---
