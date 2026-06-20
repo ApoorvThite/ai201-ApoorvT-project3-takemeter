@@ -121,12 +121,6 @@ A confusion matrix to identify which specific label pairs the model confuses mos
 
 **Minimum threshold for the project:** The fine-tuned DistilBERT model must outperform the zero-shot Groq baseline on overall accuracy. A fine-tuned model that performs worse than a zero-shot prompt would indicate either a data quality problem (noisy labels) or a training problem (hyperparameters, class imbalance).
 
-**Definition of "genuinely useful" for deployment:** A macro F1 score of 0.60 or higher across all four labels, with no individual label F1 below 0.45. The 0.45 floor matters because a label with F1 below 0.45 is barely better than random for a 4-class problem (random baseline ~0.25), and a community tool that fails completely on one discourse type is not trustworthy.
-
-**Definition of "good enough" for deployment in a real community tool:** Macro F1 of 0.65+, with all per-class F1 scores above 0.55. At this level the classifier is making meaningfully fewer errors than a human skimming posts quickly, which is the relevant comparison for a moderation or content surfacing tool. The Groq zero-shot baseline achieves macro F1 of approximately 0.58 on the test set, so 0.65 represents a meaningful improvement over what is achievable without any task-specific training.
-
-**These criteria are objectively checkable:** At the end of the project, run `classification_report` on the held-out test set and compare macro F1 to 0.60 (minimum threshold) and 0.65 (deployment threshold). The answer is binary — either the numbers are above the threshold or they are not.
-
 ---
 
 ## AI Tool Plan
